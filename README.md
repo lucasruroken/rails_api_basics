@@ -1,7 +1,7 @@
 # Rails api basics
 
 ```
-gem 'rails_api_basics', git: "https://github.com/lucasruroken/spree_mercado_pago", branch: :master
+gem 'rails_api_basics', git: "https://github.com/lucasruroken/rails_api_basics", branch: :master
 ```
 
 After install it, run
