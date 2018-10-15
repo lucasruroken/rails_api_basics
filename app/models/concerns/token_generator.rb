@@ -14,7 +14,7 @@ class TokenGenerator < Module
     host.class_eval do
       validates(generator_instance.attribute, presence: true, uniqueness: { allow_blank: true })
 
-      before_create do |instance|
+      before_validation do |instance|
         begin
           instance.send("#{generator_instance.attribute}=", generator_instance.send(:generate_token))
         end while instance.class.exists?(generator_instance.attribute => instance.send(generator_instance.attribute))
