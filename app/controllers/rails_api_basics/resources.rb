@@ -53,7 +53,7 @@ module RailsApiBasics
     end
 
     def object_params
-      params.require(:material).permit(:name)
+      raise "Should implement in inherited class"
     end
   end
 end

@@ -1,6 +1,6 @@
 module RailsApiBasics
   class BaseController < ::ActionController::API
-    include ApiAuthenticable
+    include ::ApiAuthenticable
 
     before_action :validate_client_app!
     before_action :authenticate_user!
