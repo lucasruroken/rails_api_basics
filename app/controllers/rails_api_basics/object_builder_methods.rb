@@ -40,7 +40,7 @@ module RailsApiBasics
       @object
     end
 
-    def seralizer_show_includes
+    def serializer_show_includes
       nil
     end
 

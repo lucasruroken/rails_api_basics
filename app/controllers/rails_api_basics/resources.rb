@@ -6,7 +6,7 @@ module RailsApiBasics
 
     def index
       @objects = scope_index.page(params[:page])
-      render json: serializer.new(@objects, serializer_index_includes).serialized_json
+      render json: serializer.new(@objects, includes: serializer_index_includes).serialized_json
     end
 
     def create
@@ -20,7 +20,7 @@ module RailsApiBasics
     end
 
     def show
-      render json: serializer.new(@object, seralizer_show_includes).serialized_json
+      render json: serializer.new(@object, includes: serializer_show_includes).serialized_json
     end
 
     def update
