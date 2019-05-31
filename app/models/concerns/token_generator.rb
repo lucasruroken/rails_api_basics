@@ -15,11 +15,11 @@ class TokenGenerator < Module
       validates(generator_instance.attribute, presence: true, uniqueness: { allow_blank: true })
 
       before_validation do |instance|
-        return if instance.send(generator_instance.attribute).present?
-
-        begin
-          instance.send("#{generator_instance.attribute}=", generator_instance.send(:generate_token))
-        end while instance.class.exists?(generator_instance.attribute => instance.send(generator_instance.attribute))
+        if instance.send(generator_instance.attribute).blank?
+          begin
+            instance.send("#{generator_instance.attribute}=", generator_instance.send(:generate_token))
+          end while instance.class.exists?(generator_instance.attribute => instance.send(generator_instance.attribute))
+        end
       end
     end
   end
