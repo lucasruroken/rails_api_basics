@@ -11,7 +11,7 @@ Gem::Specification.new do |s|
 
   s.add_dependency "actionpack", "~> 5.2"
   s.add_dependency "activemodel", "~> 5.2"
-  s.add_dependency "activerecord", "~> 5.2"
+  s.add_dependency "activerecord", ">= 5.2", "< 7.0"
   s.add_dependency "jwt"
   s.add_dependency "fast_jsonapi"
   s.add_dependency "kaminari"
