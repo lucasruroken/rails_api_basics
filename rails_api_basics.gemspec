@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.email       = 'lucasjavierjuarez@hotmail.com'
   s.license     = 'MIT'
 
-  s.add_dependency "actionpack", "~> 5.2"
+  s.add_dependency "actionpack", ">= 5.2", "< 7.0"
   s.add_dependency "activemodel", "~> 5.2"
   s.add_dependency "activerecord", "~> 5.2"
   s.add_dependency "jwt"
